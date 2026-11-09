@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }}</title>
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 255, 255, 0.12);
+            --linkedin-blue: #0a66c2;
+            --linkedin-hover: #004182;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            padding: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 48px 36px;
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+            animation: fadeIn 0.7s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .avatar {
+            width: 104px;
+            height: 104px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 38px;
+            font-weight: 700;
+            color: white;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.35);
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            letter-spacing: -0.5px;
+        }
+
+        .role {
+            color: #60a5fa;
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 18px;
+        }
+
+        .bio {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .btn-linkedin {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: var(--linkedin-blue);
+            color: white;
+            text-decoration: none;
+            padding: 16px 24px;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.25s ease;
+            box-shadow: 0 8px 20px -4px rgba(10, 102, 194, 0.6);
+        }
+
+        .btn-linkedin:hover {
+            background-color: var(--linkedin-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px -4px rgba(10, 102, 194, 0.8);
+        }
+
+        .btn-linkedin svg {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+        }
+
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 28px;
+            padding: 6px 14px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            border-radius: 999px;
+            font-size: 12px;
+            color: #34d399;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: #10b981;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #10b981;
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <!-- Cambia las iniciales por las tuyas o pon una etiqueta <img> -->
+        <div class="avatar">TN</div>
+
+        <!-- Personaliza tus datos aquí -->
+        <h1>Jaime Montes Gonzalez</h1>
+        <p class="role">Administrador de Sistemas & Cloud</p>
+        <p class="bio">
+            Apasionado por la infraestructura en Linux, automatización y despliegue de servicios web. ¡Conectemos para compartir proyectos y oportunidades!
+        </p>
+
+        <!-- Pon aquí el enlace real a tu perfil de LinkedIn -->
+        <a href="https://www.linkedin.com/in/jaime-montes-gonz%C3%A1lez-213410238/" target="_blank" rel="noopener noreferrer" class="btn-linkedin">
+            <svg viewBox="0 0 24 24">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+            </svg>
+            Conectar en LinkedIn
+        </a>
+
+        <div class="status">
+            <span class="dot"></span> Disponible para nuevos retos
+        </div>
+    </main>
+</body>
+</html>

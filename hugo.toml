@@ -1,0 +1,6 @@
+baseURL = 'https://JaimeG07.github.io/Web-Hugo/'
+locale = 'es-es'
+title = "Mi sitio web práctico"
+description = "Ejercicio de publicación con Hugo y GitHub Pages"
+publishDir = "."
+disableKinds = ["taxonomy", "term"]
