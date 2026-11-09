@@ -1,167 +1,126 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi sitio web práctico</title>
+    <meta name="description" content="Sitio web publicado con Hugo y GitHub Pages para IAW">
+    
+    
     <style>
         :root {
-            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
-            --card-bg: rgba(255, 255, 255, 0.05);
-            --card-border: rgba(255, 255, 255, 0.12);
-            --linkedin-blue: #0a66c2;
-            --linkedin-hover: #004182;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
+            --primary-color: #0366d6;
+            --bg-color: #f6f8fa;
+            --text-color: #24292e;
+            --border-color: #e14d4d;
         }
 
         body {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--bg-gradient);
-            color: var(--text-main);
-            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
         }
 
-        .card {
-            background: var(--card-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--card-border);
-            border-radius: 24px;
-            padding: 48px 36px;
-            max-width: 420px;
-            width: 100%;
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #eaecef;
+            padding: 2rem 1rem;
             text-align: center;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
-            animation: fadeIn 0.7s ease-out;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .avatar {
-            width: 104px;
-            height: 104px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-            margin: 0 auto 20px;
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem 0;
             display: flex;
-            align-items: center;
             justify-content: center;
-            font-size: 38px;
-            font-weight: 700;
-            color: white;
-            border: 3px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.35);
+            gap: 1.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(27,31,35,0.12);
         }
 
         h1 {
-            font-size: 26px;
-            font-weight: 700;
-            margin-bottom: 6px;
-            letter-spacing: -0.5px;
+            margin-top: 0;
+            font-size: 2.2rem;
         }
 
-        .role {
-            color: #60a5fa;
-            font-size: 15px;
-            font-weight: 500;
-            margin-bottom: 18px;
+        h2 {
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: .3rem;
+            margin-top: 1.5rem;
         }
 
-        .bio {
-            color: var(--text-muted);
-            font-size: 15px;
-            line-height: 1.6;
-            margin-bottom: 32px;
+        ul {
+            padding-left: 1.5rem;
         }
 
-        .btn-linkedin {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            background-color: var(--linkedin-blue);
-            color: white;
-            text-decoration: none;
-            padding: 16px 24px;
-            border-radius: 14px;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.25s ease;
-            box-shadow: 0 8px 20px -4px rgba(10, 102, 194, 0.6);
+        li {
+            margin-bottom: 0.5rem;
         }
 
-        .btn-linkedin:hover {
-            background-color: var(--linkedin-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 12px 24px -4px rgba(10, 102, 194, 0.8);
-        }
-
-        .btn-linkedin svg {
-            width: 22px;
-            height: 22px;
-            fill: currentColor;
-        }
-
-        .status {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 28px;
-            padding: 6px 14px;
-            background: rgba(16, 185, 129, 0.1);
-            border: 1px solid rgba(16, 185, 129, 0.25);
-            border-radius: 999px;
-            font-size: 12px;
-            color: #34d399;
-        }
-
-        .dot {
-            width: 8px;
-            height: 8px;
-            background-color: #10b981;
-            border-radius: 50%;
-            box-shadow: 0 0 8px #10b981;
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: #586069;
+            font-size: 0.9rem;
         }
     </style>
 	<meta name="generator" content="Hugo 0.169.0">
 </head>
 <body>
-    <main class="card">
-        
-        <div class="avatar">TN</div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/posts/">Blog</a></li>
+                <li><a href="https://github.com/JaimeG07" target="_blank" rel="noopener noreferrer">Mi Perfil de GitHub</a></li>
+            </ul>
+        </nav>
+        <h1>Mi sitio web práctico</h1>
+        <p></p>
+    </header>
 
-        
-        <h1>Jaime Montes Gonzalez</h1>
-        <p class="role">Administrador de Sistemas & Cloud</p>
-        <p class="bio">
-            Apasionado por la infraestructura en Linux, automatización y despliegue de servicios web. ¡Conectemos para compartir proyectos y oportunidades!
-        </p>
+    <main>
+        <section class="bienvenida">
+            <h2>Bienvenida</h2>
+            <p>Este sitio web ha sido desplegado automáticamente en <strong>GitHub Pages</strong> utilizando el generador de sitios estáticos <strong>Hugo</strong> como parte de las prácticas del módulo de <em>Implantación de Aplicaciones Web (IAW)</em>.</p>
+        </section>
 
-        
-        <a href="https://www.linkedin.com/in/jaime-montes-gonz%C3%A1lez-213410238/" target="_blank" rel="noopener noreferrer" class="btn-linkedin">
-            <svg viewBox="0 0 24 24">
-                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
-            </svg>
-            Conectar en LinkedIn
-        </a>
-
-        <div class="status">
-            <span class="dot"></span> Disponible para nuevos retos
-        </div>
+        <section class="ultimos-posts">
+            <h2>Últimas entradas del Blog</h2>
+            <ul>
+              
+                <li>
+                    <a href="/Web-Hugo/posts/hola-mundo/">Hola Mundo</a> 
+                    <small>(29/10/2026)</small>
+                </li>
+              
+            </ul>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026 - Módulo IAW - ASIR</p>
+    </footer>
 </body>
 </html>
