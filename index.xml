@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Mi sitio web práctico</title>
+		<link>https://jaimeg07.github.io/Web-Hugo/</link>
+		<description>Recent content on Mi sitio web práctico</description>
+		<generator>Hugo</generator>
+		<language>es</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 29 Oct 2026 17:30:00 +0100</lastBuildDate>
+		
+			<atom:link href="https://jaimeg07.github.io/Web-Hugo/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Hola Mundo</title>
+				<link>https://jaimeg07.github.io/Web-Hugo/posts/hola-mundo/</link>
+				<pubDate>Thu, 29 Oct 2026 17:30:00 +0100</pubDate>
+				<guid>https://jaimeg07.github.io/Web-Hugo/posts/hola-mundo/</guid>
+				<description>&lt;p&gt;¡Bienvenido a mi nuevo sitio web desplegado en Ubuntu Server!&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

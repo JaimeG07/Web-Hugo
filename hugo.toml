@@ -3,4 +3,4 @@ languageCode = "es"
 title = "Mi sitio web práctico"
 description = "Ejercicio de publicación con Hugo y GitHub Pages"
 publishDir = "."
-disableKinds = ["RSS", "taxonomy", "term"]
+disableKinds = ["taxonomy", "term"]
